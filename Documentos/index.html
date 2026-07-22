@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>FM Tradición 97.1</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#8B0000">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <img src="" alt="Logo FM Tradición" id="header-logo" class="logo">
+    <h1>FM Tradición 97.1</h1>
+  </header>
+
+  <!-- Contenido Principal Dinámico -->
+  <main id="app-content">
+    <section id="hero" class="hero-section">
+      <img src="" alt="Hero" id="hero-image">
+      <div class="hero-overlay">
+        <h2>Tu radio amiga</h2>
+        <p>Conectando con nuestra esencia</p>
+      </div>
+    </section>
+
+    <section id="programacion" class="content-section">
+      <h3>📅 Programación</h3>
+      <div id="prog-list" class="list-container">Cargando programación...</div>
+    </section>
+
+    <section id="youtube-live" class="content-section">
+      <h3>📺 YouTube en Vivo</h3>
+      <div class="video-container">
+        <!-- Reemplazar VIDEO_ID con el ID real del live o canal de FM Tradición -->
+        <iframe id="yt-player" width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="warning-text">⚠️ Al reproducir el video, la radio se pausará automáticamente.</p>
+    </section>
+  </main>
+
+  <!-- Reproductor Sticky Global -->
+  <footer class="sticky-player">
+    <div class="player-info">
+      <img src="" alt="Miniatura" id="player-art" class="player-art">
+      <div class="player-text">
+        <span id="player-title" class="player-title">FM Tradición 97.1</span>
+        <span id="player-status" class="player-status">🔴 OFFLINE</span>
+      </div>
+    </div>
+    <div class="player-controls">
+      <button id="play-btn" class="control-btn" aria-label="Reproducir o Pausar">▶</button>
+    </div>
+    <audio id="radio-audio" preload="none">
+      <source src="" type="audio/mpeg">
+    </audio>
+  </footer>
+
+  <!-- Botón Flotante WhatsApp -->
+  <a id="whatsapp-btn" href="#" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    💬
+  </a>
+
+  <!-- ===================== PWA INSTALL BANNERS ===================== -->
+  <!-- Android -->
+  <div id="pwa-banner-android" class="pwa-banner" style="display:none;">
+    <div class="pwa-banner-content">
+      <img src="" alt="Logo" class="pwa-banner-logo" id="banner-logo-android">
+      <div class="pwa-banner-text">
+        <div class="pwa-banner-title">INSTALAR APP</div>
+        <div class="pwa-banner-subtitle">FM Tradición 97.1 · Tu Radio Amiga</div>
+      </div>
+      <button id="pwa-install-btn" class="pwa-btn-primary">INSTALAR</button>
+      <button id="pwa-close-android" class="pwa-btn-close" aria-label="Cerrar">✕</button>
+    </div>
+  </div>
+
+  <!-- iOS Safari -->
+  <div id="pwa-banner-ios" class="pwa-banner" style="display:none;">
+    <div class="pwa-banner-content-ios">
+      <div class="pwa-banner-header">
+        <div class="pwa-banner-title">📲 INSTALÁ LA APP</div>
+        <button id="pwa-close-ios" class="pwa-btn-close" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="pwa-instructions">
+        <div class="pwa-instruction-step">
+          <span class="step-number">1️⃣</span>
+          <div class="step-text">
+            <div class="step-title">Tocá el botón compartir</div>
+            <div class="step-subtitle">Ícono <strong class="text-accent">⬆</strong> en la barra de Safari</div>
+          </div>
+        </div>
+        <div class="pwa-instruction-step">
+          <span class="step-number">2️⃣</span>
+          <div class="step-text">
+            <div class="step-title">Agregar a inicio</div>
+            <div class="step-subtitle">Buscá esta opción en el menú</div>
+          </div>
+        </div>
+      </div>
+      <div class="pwa-banner-footer">Solo funciona desde Safari en iPhone y iPad</div>
+    </div>
+  </div>
+
+  <!-- Footer Desarrollador -->
+  <div class="dev-footer">
+    <img src="" alt="Fer News" id="dev-logo">
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
